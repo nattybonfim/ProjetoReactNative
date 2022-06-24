@@ -4,7 +4,7 @@ import React from "react";
 import { Avatar } from "@rneui/base";
 export function IconeUser ({tamanho}:{tamanho:any}) {
     return(
-  <View >
+ 
  <Avatar
               size={100}
               containerStyle={[style.borderRadius, { width:tamanho,height:tamanho} ]}
@@ -12,7 +12,7 @@ export function IconeUser ({tamanho}:{tamanho:any}) {
               source={require('../../assets/images/foto.png')}
            
             />
-  </View>
+  
     );
 }
 
