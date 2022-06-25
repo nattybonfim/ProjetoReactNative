@@ -9,7 +9,7 @@ export function IconeUser ({tamanho}:{tamanho:any}) {
               size={100}
               containerStyle={[style.borderRadius, { width:tamanho,height:tamanho} ]}
               rounded
-              source={require('../../assets/images/foto.png')}
+              source={require('../../assets/images/Nat.jpeg')}
            
             />
   
@@ -22,8 +22,16 @@ const style=StyleSheet.create({
         borderWidth:5,
         borderColor:"#666599",
         position:"relative",
-        
-       
+        zIndex:3,
+        elevation:3,
+        shadowColor: "red",
+        shadowOffset: {
+          width: 0,
+          height: 3,
+        },
+        shadowOpacity:  0.17,
+        shadowRadius: 3.05,
+    
 
     }
 

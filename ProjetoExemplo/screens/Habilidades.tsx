@@ -1,4 +1,5 @@
 import { StyleSheet } from 'react-native';
+import { Header } from './componentes/Header';
 import { IconeUser } from './componentes/iconeUser';
 import EditScreenInfo from '../components/EditScreenInfo';
 import { Text, View } from '../components/Themed';
@@ -6,7 +7,7 @@ import { Text, View } from '../components/Themed';
 export default function Habilidades() {
   return (
     <View>
-       <IconeUser tamanho={70}  />
+       <Header titulo={'Habilidades'} />
     </View>
   );
 }

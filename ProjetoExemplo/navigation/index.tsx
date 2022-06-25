@@ -58,6 +58,7 @@ function BottomTabNavigator() {
         component={Perfil}
         options={({ navigation }: RootTabScreenProps<'Perfil'>) => ({
           title: 'Perfil',
+          headerShown:false,
           tabBarIcon: ({ color }) => <TabBarIcon name="user" color={color} />,
          
         })}
@@ -67,6 +68,7 @@ function BottomTabNavigator() {
       component={Projetos}
       options={({navigation}:RootTabScreenProps<'Projetos'> )=>({
         title:'Projetos',
+        headerShown:false,
         tabBarIcon:({color}) => <TabBarIcon name="folder" color={color} />,
       })}
       
@@ -77,7 +79,8 @@ function BottomTabNavigator() {
         name="Habilidades"
         component={Habilidades}
         options={({navigation}:RootTabScreenProps<'Habilidades'>)=>({
-          title: 'Habilidades',
+          title: 'Habilidades', 
+          headerShown:false,
           tabBarIcon: ({ color }) => <TabBarIcon name="list" color={color} />,
         })}
       />

@@ -10,6 +10,9 @@ export default function Perfil({ navigation }: RootTabScreenProps<"Perfil">) {
     <ScrollView style={styles.container}>
       <View style={styles.header}>
         <IconeUser tamanho={100} />
+
+        <Text style={styles.titulo}>Natalia de O. Bonfim</Text>
+        <Text style={styles.subtitulo}>Desenvolvedora em formação</Text>
       </View>
 
       <Text style={styles.title}>Sobre</Text>
@@ -24,9 +27,9 @@ export default function Perfil({ navigation }: RootTabScreenProps<"Perfil">) {
       <Text style={styles.conteudo}>Me siga nas redes sociais!</Text>
 
       <View style={styles.row}>
-        <Icone titulo={"Instagram"} nomeIcone={"instagram-square"} />
-        <Icone titulo={"Github"} nomeIcone={"github"} />
-        <Icone titulo={"linkedin"} nomeIcone={"linkedin"} />
+        <Icone titulo={"Instagram"} nomeIcone={"instagram-square"}url={"https://www.instagram.com/bonfimnatty/"}/>
+        <Icone titulo={"Github"} nomeIcone={"github"}url={"https://github.com/nattybonfim"} />
+        <Icone titulo={"linkedin"} nomeIcone={"linkedin"}url={"https://www.linkedin.com/in/nat%C3%A1lia-bonfim-33b72a201/"} />
       </View>
     </ScrollView>
   );
@@ -72,10 +75,20 @@ header:{
         elevation: 4,
  borderBottomLeftRadius: 50,
  borderBottomRightRadius: 50,
+alignItems:"center",
+justifyContent:"center",
+  },
 
+ titulo:{
+ color:"#F5F5F5",
+ fontSize:20,
+ fontWeight:"900",
+ marginTop:20,
+ },
 
+subtitulo:{
+color:"#F5F5F5",
+marginTop:10,
+}
 
-
-
-  }
 });
