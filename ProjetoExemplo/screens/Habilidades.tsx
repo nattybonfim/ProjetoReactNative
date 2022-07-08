@@ -15,19 +15,19 @@ export default function Habilidades() {
           itens: [
             {
               icone: "comment-dots",
-              nomeTitulo: "Comunicação",
+              nomeTitulo: "Comunicação"
             },
             {
               icone: "clock",
-              nomeTitulo: "Pontualidade",
+              nomeTitulo: "Pontualidade"
             },
             {
               icone: "people-arrows",
-              nomeTitulo: "Trabalho em equipe",
-            },
-          ],
-        },
-      ],
+              nomeTitulo: "Trabalho em equipe"
+            }
+          ]
+        }
+      ]
     },
 
     {
@@ -37,39 +37,45 @@ export default function Habilidades() {
           itens: [
             {
               icone: "php",
-              nomeTitulo: "PHP",
+              nomeTitulo: "PHP"
             },
             {
               icone: "react",
-              nomeTitulo: "React Native",
+              nomeTitulo: "React Native"
             },
             {
               icone: "html5",
-              nomeTitulo: "Html",
-            },
-          ],
-        },
-      ],
-    },
+              nomeTitulo: "Html"
+            }
+          ]
+        }
+      ]
+    }
   ];
   return (
     <View>
-      <Header titulo={"Habilidades"} />
+      <Header titulo={"Teste"} />
 
-      {data.map((dta: any) => (
-        <View>
+      {
+      data.length >0 ?
+      data.map((dta: any,j) => (
+        <View key={j}>
           <Text style={styles.title}>{dta.competencia.nome}</Text>
           <Card containerStyle={styles.card}>
 
-            {dta?.competencia?.itens?.map((item: any) => (
-              <View style={styles.row}>
+            {
+             dta?.competencia?.itens?.length >0 ? 
+            dta?.competencia?.itens?.map((item: any,i) => (
+              <View style={styles.row} >
                 <FontAwesome5 name={item.icone} size={50} color="#666599" />
                 <Text style={styles.subTitulo}>{item.nomeTitulo}</Text>
               </View>
-            ))}
+            )): null
+          }
           </Card>
         </View>
-      ))}
+      )):null
+    }
     </View>
   );
 }
